@@ -9,9 +9,14 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Makarand Nikam | Portfolio</title>
+        <title>Portfolio</title>
 </head>
     <body>
+
+        <!-- ========Loader======== -->
+        <div class="loader_bg">
+            <div class="loader"></div>
+        </div>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -208,7 +213,7 @@
                 <div class="skills__container bd-grid">          
                     <div>
                         <h2 class="skills__subtitle">Profesional Skills</h2>
-                        <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p>
+                        <p class="skills__text">‘Passion is important; every other skill set is learnable’</p>
                         <div class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxl-html5 skills__icon'></i>
@@ -239,7 +244,7 @@
                         <div class="skills__data">
                             <div class="skills__names">
                                 <i class='bx bxs-paint skills__icon'></i>
-                                <span class="skills__name">UI</span>
+                                <span class="skills__name">User Interface</span>
                             </div>
                             <div class="skills__bar skills__ui">
                                 
@@ -286,7 +291,7 @@
 
                 <div class="contact__container bd-grid">
 
-                    <form method="POST" class="contact__form">
+                    <form method="POST" autocomplete="off" name="google-sheet" class="contact__form">
 
                         <input type="text" id="Name" name="name" placeholder="Name" class="contact__input" />
 
@@ -294,9 +299,20 @@
 
                         <textarea name="message" placeholder="Message" id="message" cols="0" rows="10" class="contact__input"></textarea>
 
-                        <button type="submit" class="contact__button primary-button">Send</button>
+                        <button type="submit" name="submit" class="contact__button primary-button">Send</button>
 
                     </form>
+                    <script>
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbzIJ8x0ND2D8U9z1NocZ9zO-SzjKznGHZ9xKm-EIrs2DxEcA7Xy/exec'
+                        const form = document.forms['google-sheet']
+                      
+                        form.addEventListener('submit', e => {
+                          e.preventDefault()
+                          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                            .then(response => alert("Happy To Connect With You!!!!!"))
+                            .catch(error => console.error('Error!', error.message))
+                        })
+                      </script>
                 </div>
             </section>
         </main>
@@ -306,12 +322,12 @@
         <footer class="footer">
             <p class="footer__title">Mack</p>
             <div class="footer__social">
-                <a href="#" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                <a onclick="window.open('https://dribbble.com/macknikam')" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                <a onclick="window.open('https://dribbble.com/macknikam')" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a onclick="window.open('https://dribbble.com/macknikam')" class="footer__icon"><i class='bx bxl-dribbble' ></i></a>
                 
             </div>
-            <p>makarandnikam@gmail.com</p>
+            <p>makarandnikam1511@gmail.com</p>
             <p>&#169; 2020 copyright all right reserved</p>
         </footer>
 
@@ -321,5 +337,13 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!-- Loader -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+          <script>
+              setTimeout(function(){
+                  $('.loader_bg').fadeToggle();
+              }, 3000);
+          </script>
     </body>
 </html>
