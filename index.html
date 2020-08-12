@@ -9,9 +9,18 @@
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
+        <!-- ===== FontAwsome Icons -->
+        <link rel="stylesheet" href="./assets/css/all.min.css">
+
         <title>Portfolio</title>
 </head>
     <body>
+        <!-- Dark mood button -->
+        <div class="view-mode" data-mode="light" onclick="changeMode(this)">
+            <span class="fas fa-moon icon"></span>
+        </div>
+
+
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -41,7 +50,7 @@
                 <div class="home__data">
                     <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Makarand</span><br> UI & Web Designer</h1>
 
-                    <button type="button" onclick="window.open('https://drive.google.com/file/d/1HlWrvnK_iNxvh7fKZOWeqYxvnsNQuhBB/view?usp=drivesdk')" class="contact__button primary-button">Download CV</button>
+                    <button type="button" onclick="window.open('https://drive.google.com/file/d/1dQ2SqBA8lyAr1upeYTjUl4p52x7FvagE/view?usp=sharing')" class="contact__button primary-button">Download CV</button>
                 </div>
 
                 <div class="home__social">
@@ -190,7 +199,7 @@
                         <img src="assets/img/about.png" alt="">
                     </div>
                     
-                    <div>
+                    <div class="about-me">
                         <h2 class="about__subtitle">I'am Mack</h2>
                         <p class="about__text">
                             I am Final year Computer Engineering Student from D.Y.Patil University Ambi, Pune.
@@ -332,6 +341,9 @@
 
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
+
+        <!-- ===== FontAwsome Icons -->
+        <script src="./assets/js/all.min.js"></script>
 
     </body>
 </html>
