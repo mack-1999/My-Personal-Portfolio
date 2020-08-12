@@ -6,6 +6,7 @@
 /* ===== Dark Mode ===== */
 
 .view-mode{
+  z-index: 11111;
   position: fixed;
   bottom: 4rem;
   right: 4rem;
