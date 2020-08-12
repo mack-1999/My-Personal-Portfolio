@@ -188,20 +188,21 @@ img{
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: #0E2431;
+    background-color: gray;
     transition: .5s;
   }
   .home__img{
     width: 80%;
     margin-top: 16rem;
   }
+  
 }
 .nav__item{
   margin-bottom: var(--mb-4);
 }
 .nav__item a{
   position: relative;
-  color: #fff;
+  color: var(--second-color);
 }
 .nav__link:hover{
   position: relative;
