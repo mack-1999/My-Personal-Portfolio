@@ -55,3 +55,17 @@ sr.reveal('.work__img',{interval: 200});
 
 /*SCROLL CONTACT*/
 sr.reveal('.contact__input',{interval: 200}); 
+
+function changeMode(themeObj) {
+
+    if(themeObj.dataset.mode == "light") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeObj.dataset.mode = "dark";
+    } else {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeObj.dataset.mode = "light";
+        
+    }
+
+
+}
