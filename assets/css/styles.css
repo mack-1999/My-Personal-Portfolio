@@ -6,7 +6,6 @@
 /* ===== Dark Mode ===== */
 
 .view-mode{
-  z-index: 99999;
   position: fixed;
   bottom: 4rem;
   right: 4rem;
@@ -170,11 +169,10 @@ img{
 @media screen and (max-width: 767px){
 
   .view-mode{
-    /* position: fixed; */
-    bottom: 4rem;
-    right: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    bottom: 3.5rem;
+    right: 1.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
   }
   
   .view-mode .icon{
@@ -202,7 +200,7 @@ img{
 }
 .nav__item a{
   position: relative;
-  color: var(--second-color);
+  color: #fff;
 }
 .nav__link:hover{
   position: relative;
