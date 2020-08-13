@@ -179,18 +179,18 @@ img{
   .view-mode{
     bottom: 3.5rem;
     right: 1.5rem;
-    width: 2.8rem;
-    height: 2.8rem;
+    width: 3rem;
+    height: 3rem;
   }
   
   .view-mode .icon{
     color: var(--bg-color);
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 
   .brand-logo img{
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
   }
 
   .nav__menu{
