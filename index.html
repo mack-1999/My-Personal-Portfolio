@@ -13,6 +13,8 @@
         <title>Makarand Nikam | Portfolio.</title>
 </head>
     <body>
+        <div class="cursor"> </div>
+        
         <!-- Dark mood button -->
         <div class="view-mode" data-mode="light" onclick="changeMode(this)">
             <span class='bx bxs-moon icon'></span>
@@ -267,27 +269,27 @@
 
                 <div class="work__container bd-grid">
                     <div class="work__img">
-                        <img src="assets/img/work1.png" alt="">
+                        <a onclick="window.open('https://www.behance.net/gallery/99581133/Travel-Company-Web-Ui')"><img src="assets/img/work2.png" alt=""></a> 
                     </div>
                     <div class="work__img">
-                        <img src="assets/img/work2.png" alt="">
+                        <a onclick="window.open('https://www.behance.net/gallery/99373941/MyJio-Website-UI')"><img src="assets/img/work1.png" alt=""></a>
                     </div>
                     <div class="work__img">
-                        <img src="assets/img/work3.png" alt="">
+                        <a onclick="window.open('https://www.behance.net/gallery/99305643/Yoga-Classes-Web-UI')"><img src="assets/img/work3.png" alt=""></a>
                     </div>
                     <div class="work__img">
-                        <img src="assets/img/work4.png" alt="">
+                        <a onclick="window.open('https://www.behance.net/gallery/99398877/Business-Ideas-website')"><img src="assets/img/work4.png" alt=""></a>
                     </div>
                     <div class="work__img">
-                        <img src="assets/img/work5.png" alt="">
+                        <a onclick="window.open('https://www.behance.net/gallery/100771643/Lets-Eat')"><img src="assets/img/work5.png" alt=""></a>
                     </div>
                     <div class="work__img">
-                        <img src="assets/img/work6.png" alt="">
+                        <a onclick="window.open('https://www.behance.net/gallery/102981131/Blog-Website')"><img src="assets/img/work6.jpg" alt=""></a>
                     </div>
                 </div>
             </section>
 
-            <!--===== CONTACT =====-->
+            <!--===== CONTACT =====--> 
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contact</h2>
 
@@ -313,6 +315,9 @@
                           fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                             .then(response => alert("Happy To Connect With You!!!!!"))
                             .catch(error => console.error('Error!', error.message))
+                            var frm = document.getElementsByName('google-sheet')[0];
+                             frm.reset();
+                             return false;
                         })
                       </script>
                 </div>
