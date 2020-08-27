@@ -1,6 +1,7 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
+
 ::-webkit-scrollbar{
   width: 8px;
   background-color: lightgray;
@@ -9,6 +10,7 @@
 ::-webkit-scrollbar-thumb{
   background-color: #4070F4;
 }
+
 
 .cursor {
   z-index: 11111;
@@ -137,7 +139,9 @@ html:not(html:hover) .cursor::after {
 }
 html{
   scroll-behavior: smooth;
+
   cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+
 }
 body{
   margin: var(--header-height) 0 0 0;
@@ -261,7 +265,7 @@ img{
     width: 80%;
     margin-top: 16rem;
   }
-  
+
 }
 .nav__item{
   margin-bottom: var(--mb-4);
@@ -495,6 +499,11 @@ img{
 }
 
 /* ===== CONTACT =====*/
+
+.contact__container{
+  row-gap: 2rem;
+}
+
 .contact__input{
   width: 100%;
   font-size: var(--normal-font-size);
@@ -506,6 +515,38 @@ img{
   margin-bottom: var(--mb-4);
 }
 
+#Woman{
+  animation: float-woman 4s ease-in-out infinite;
+}
+
+@keyframes float-woman {
+  0% {
+    transform: translate(-125%, -26%);
+  }
+  50% {
+    transform: translate(-125%, -28%);
+  }
+  100% {
+    transform: translate(-125%, -26%);
+  }
+}
+
+#Man{
+  animation: float 4s ease-in-out infinite;
+  
+}
+
+@keyframes float {
+  0% {
+    transform: translate(-80%, -16%);
+  }
+  50% {
+    transform: translate(-80%, -18%);
+  }
+  100% {
+    transform: translate(-80%, -16%);
+  }
+}
 
 /* ===== FOOTER =====*/
 .footer{
@@ -585,11 +626,17 @@ img{
     bottom: 15%;
   }
 
-  .about__container, .skills__container{
+  .about__container, .skills__container, .contact__container{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     text-align: initial;
   }
+
+  .contact-img{
+    width: 535.574px; 
+    height: 540px;
+  }
+
   .about__img img{
     width: 300px;
   }
@@ -598,6 +645,7 @@ img{
     grid-template-rows: repeat(2,1fr);
     column-gap: 2rem;
   }
+
   .contact__form{
     width: 360px;
   }
